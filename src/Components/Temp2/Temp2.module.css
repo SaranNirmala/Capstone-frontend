@@ -1,0 +1,130 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container, .leftSide{
+position: relative;
+background:#003147;
+padding:"40px"
+}
+
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color:#fff;
+    margin: 10px;
+}
+
+#img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header{
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.4em;
+    font-weight:600;
+}
+.spanHeader{
+    font-weight: 300;
+    font-size: 0.8em;
+}
+.contact{
+    padding-top:10px ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.contactInfo{
+    position: relative;
+}
+
+.listItems {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+}
+
+.icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.education{
+    margin-bottom: 15px;
+    color: white;
+    font-weight:600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleEdu{
+  font-weight: 500;
+}
+.skills{
+    margin-bottom: 15px;
+    color: white;
+    font-weight:600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container, .rightSide{
+    position: relative;
+    background:#fff;
+    padding:"40px"
+    }
+
+    .summary{
+        margin: 40px 20px;
+        padding: 5px;
+    }
+    
+    .experience{
+        padding: 5px;
+        margin: 20px;
+       
+    }
+    
+    .exp{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0px;
+    }
+    .expHead{
+        margin: 5px;
+    }
+    .para{
+        border-left: 5px solid #003147;
+        border-radius: 5px;
+    }

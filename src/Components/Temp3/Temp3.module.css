@@ -1,0 +1,164 @@
+.tempContainer{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container, .leftSide{
+    position: relative;
+    background:#fff;
+    padding:"40px"
+}
+
+.profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color:#fff;
+    /* margin: 10px; */
+    height:300px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.namebox{
+    display: flex;
+    height: 120px;
+    width: 100%;
+    /* background:#8E44AD; */
+    background: #808000;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 21px;
+
+}
+
+.summary{
+    margin:20px;
+    padding: 5px;
+    margin-top: -90px;
+}
+
+.experience{
+    padding: 5px;
+    margin: 20px;
+    
+   
+}
+.expHead{
+   /* background:#2980B9; */
+   /* border-radius:10px ; */
+   background: #808000;
+   width: 100%;
+}
+.exp{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+.expHead{
+    margin: 5px;
+}
+.para{
+    /* border-left: 5px solid #D7BDE2; */
+    border-radius: 5px;
+}
+
+    
+.container, .rightSide{
+    position: relative;
+    background:#808000;
+    padding:"40px"
+    }
+.profilePic{
+    border-radius: 50%;
+}
+.imag{
+    border-radius: 50%;
+}
+
+.contact{
+    padding-top:10px ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.title {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+   
+}
+.contacts{
+    margin: 10px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight:600;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+   
+}
+.contactInfo{
+    position: relative;
+   /* margin-left: -110px; */
+}
+
+.listItems {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+    margin-top: 15px;
+    margin-left: 20px;
+
+}
+
+.icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #eeee04;
+}
+
+.education{
+    margin: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight:600;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 40px;
+    margin-left: 30px;
+
+}
+
+.titleEdu{
+  font-weight: 500;
+  margin: 15px;
+}
+.skills{
+    margin: 15px;
+    margin-top: 50px;
+    color: white;
+    font-weight:600;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-left: 30px;
+}
