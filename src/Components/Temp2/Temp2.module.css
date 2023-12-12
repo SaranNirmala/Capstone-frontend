@@ -1,130 +1,344 @@
 .container {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    min-height: 1000px;
-    margin: 50px;
-    background-color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  /* margin: 50px; */
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
-.container, .leftSide{
-position: relative;
-background:#003147;
-padding:"40px"
+.container,
+.leftSide {
+  position: relative;
+  background: #003147;
 }
 
-.profileText{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    color:#fff;
-    margin: 10px;
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  /* height: 250px;
+  width: 250px; */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  margin: 10px;
+}
+.profilePic {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
-#img{
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.header{
-    margin-top: 20px;
-    text-align: center;
-    line-height: 1.4em;
-    font-weight:600;
+.header {
+  margin-top: 20px;
+  text-align: center;
+  /* line-height: 1.4em; */
+  font-weight: 600;
+  font-size: 30px;
 }
-.spanHeader{
-    font-weight: 300;
-    font-size: 0.8em;
+.spanHeader {
+  font-weight: 300;
+  font-size: 0.8em;
 }
-.contact{
-    padding-top:10px ;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.contact {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
 }
 
 .title {
-    color: white;
-    font-weight: 500;
-    letter-spacing: 1px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-.contactInfo{
-    position: relative;
+.contactInfo {
+  position: relative;
 }
 
 .listItems {
-    position: relative;
-    cursor: pointer;
-    color: white;
-    font-weight: 300;
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
 }
 
-.icon{
-    display: inline-block;
-    width: 30px;
-    font-size: 18px;
-    color: #03a9f4;
+.icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
 }
 
-.education{
-    margin-bottom: 15px;
-    color: white;
-    font-weight:600;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.education {
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.titleEdu{
+.titleEdu {
   font-weight: 500;
+  font-size: 25px;
+  /* text-align: center; */
 }
-.skills{
-    margin-bottom: 15px;
-    color: white;
-    font-weight:600;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.eduhead {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.skills {
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.listSkill {
+  font-size: 20px;
+  font-weight: 400;
+}
+.container,
+.rightSide {
+  position: relative;
+  background: #fff;
+  padding: "40px";
 }
 
-.container, .rightSide{
-    position: relative;
-    background:#fff;
-    padding:"40px"
-    }
+.summary {
+  margin: 40px 10px 10px 20px;
+  padding: 5px;
+}
 
-    .summary{
-        margin: 40px 20px;
-        padding: 5px;
-    }
-    
-    .experience{
-        padding: 5px;
-        margin: 20px;
-       
-    }
-    
-    .exp{
-        display: flex;
-        justify-content: space-between;
-        margin: 5px 0px;
-    }
-    .expHead{
-        margin: 5px;
-    }
-    .para{
-        border-left: 5px solid #003147;
-        border-radius: 5px;
-    }
+.sumpara {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.experience {
+  padding: 5px;
+  margin: 20px;
+}
+
+.exp {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+.expHead {
+  margin: 5px;
+}
+.para {
+  border-left: 5px solid #003147;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+}
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+.btnDownload {
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  background-color: #003147;
+  border-radius: 20px;
+  /* width: 180px; */
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+.companyDetails {
+  padding-left: 32px;
+}
+
+@media screen and (max-width: 775px) {
+  .container {
+    grid-template-columns: 1fr 2fr;
+  }
+  /* .profile {
+    max-width: 800px;
+  } */
+  .profilePic {
+    height: 150px;
+    width: 150px;
+  }
+
+  .profileText {
+    width: 200px;
+    height: 200px;
+  }
+  .header {
+    font-size: 18px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .titleEdu {
+    font-size: 20px;
+  }
+  .eduhead {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .contactInfo {
+    padding: 15px 0px;
+  }
+  .heading {
+    font-weight: 100;
+    font-size: 12px;
+  }
+  .headTitle {
+    font-size: 16px;
+  }
+  .education {
+    /* padding: 10px; */
+    margin-bottom: 10px;
+  }
+  .skills {
+    padding: 25px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .listSkill {
+    font-size: 16px;
+    font-weight: 200;
+  }
+  .listItems {
+    font-size: 14px;
+  }
+  .contactInfo {
+    margin: 0px;
+    padding: 0px 15px;
+  }
+  .education {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .edulist {
+    margin-left: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+  }
+  .experience {
+    margin: 10px;
+  }
+  .skilllist {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+  }
+  .sumpara {
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    margin-right: 20px;
+  }
+  .companyDetails {
+    font-size: 14px;
+    font-weight: 100;
+    padding-left: 20px;
+  }
+  .para {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    margin-right: 20px;
+  }
+  .exp {
+    font-size: 12px;
+  }
+  .companyTitle {
+    font-size: 14px;
+  }
+  .exp {
+    font-size: 14px;
+  }
+  .btnDownload {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 500px;
+  }
+  
+  .profilePic {
+    height: 80px;
+    width: 80px;
+  }
+
+  .profileText {
+    width: 90%;
+    height: 120px;
+    text-align: center;
+  }
+  .skills {
+    padding: 25px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .listSkill {
+    font-size: 12px;
+    font-weight: 200;
+  }
+  .listItems {
+    font-size: 12px;
+  }
+
+  .edulist {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .titleEdu {
+    font-size: 13px;
+  }
+  .companyTitle {
+    font-size: 10px;
+  }
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+  }
+  .eduhead {
+    font-size: 12px;
+  }
+}

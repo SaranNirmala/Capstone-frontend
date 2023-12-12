@@ -7,11 +7,10 @@ const Navbar = () =>{
         
           <div className={styles.navTop}>
             <img src={logo} alt="logoImage" className={styles.image}/>
-            
+            <h3 className={styles.pros} style={{color:'white'}}>The Best CV makes you shine</h3>
             <div className={styles.rightNav}>
-             {/* <div className={styles.navcontent}> */}
-                <input type="text" name='searchbar' placeholder='Search Here!!!' className={styles.searchInput}/>
-                <button className={styles.btn}><Link to='/login'>SignIn</Link></button>
+               {/* <input type="text" name='searchbar' placeholder='Search Here!!!' className={styles.searchInput}/> */}
+                < button className={styles.btn}><Link to='/login' className={styles.linkBtn}>SignIn</Link></button>
              </div>
           </div>
       

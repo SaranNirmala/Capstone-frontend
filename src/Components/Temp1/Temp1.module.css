@@ -1,85 +1,237 @@
 .tempContainer {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    min-height: 1000px;
-    margin: 50px;
-    background-color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  /* margin: 50px; */
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1); */
 }
 
 .container,
 .leftSide {
-    position: relative;
-    background:goldenrod;
-    padding: "40px"
+  position: relative;
+  background: goldenrod;
+  padding: "40px";
 }
 
 .profile {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    color:black;
-    margin: 0px 10px;
-    background:#fff;
-    border-bottom-left-radius:300px;
-    border-bottom-right-radius:300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  color: black;
+  margin: 0px 10px;
+  background: #fff;
+  border-bottom-left-radius: 300px;
+  border-bottom-right-radius: 300px;
 }
-.profileText{
-    position:relative;
-    height:200px; 
-    width:200px;
-    overflow:hidden;
-    border-bottom-left-radius:100px;
-    border-bottom-right-radius:100px;
-    }
+.profileText {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
 .imag {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heading {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+.skilSet {
+  padding: 5px;
+}
+.degree {
+  padding: 5px;
+}
+.edulist {
+  font-size: 24px;
+  padding-right: 15px;
+  margin-right: 5px;
+}
+.skilllist {
+  font-size: 24px;
+}
+.summary {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+}
+.sumPara {
+  font-size: 16px;
+}
+.experience {
+  padding: 5px;
+  margin: 10px;
+  margin-left: 5px;
+}
+
+.para {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.exp {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
+  font-size: 20px;
+}
+.expHead {
+  margin: 5px;
+}
+.para {
+  border-left: 5px solid goldenrod;
+  border-radius: 5px;
+}
+.companyTitle {
+  font-size: 20px;
+}
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+.btnDownload {
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  background-color: rgb(168, 118, 9);
+  border-radius: 20px;
+  /* width: 180px; */
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+.companyDetails {
+  padding-left: 32px;
+}
+@media screen and (max-width: 775px) {
+  .tempContainer {
+    grid-template-columns: 0.5fr 1fr;
+  }
+  .profile {
+    max-width: 800px;
+  }
+  .profileText {
+    width: 100px;
+    height: 100px;
+  }
+  .heading {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .headTitle {
+    font-size: 16px;
+  }
+  .education {
+    padding: 25px;
+  }
+  .skills {
+    padding: 25px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .listItems {
+    font-size: 12px;
+  }
+  .contactInfo {
+    margin: 0px;
+    padding: 8px;
+  }
+  .education {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .edulist {
+    margin-left: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+  }
+  .skilllist {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+  }
+  .sumPara {
+    font-size: 12px;
+  }
+  .companyDetails {
+    font-size: 14px;
+    font-weight: 100;
+    padding-left: 25px;
+  }
+  .para {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .exp {
+    font-size: 12px;
+  }
+  .companyTitle {
+    font-size: 12px;
+  }
+  .exp {
+    font-size: 14px;
+  }
+  .btnDownload {
+    /* width:100px; */
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tempContainer {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.heading{
-     margin-top: 10px;
-    text-align: center;
-    line-height: 1.4em;
-    font-weight:600;
-}
-
-.skilSet{
-    padding: 5px;
-}
-.degree{
-    padding: 5px;
-}
-
-.summary{
-    margin: 40px 20px;
-    padding: 5px;
+    max-width: 1000px;
+    min-height: 600px;
+  }
+  .heading {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .headTitle {
+    font-size: 13px;
+  }
+  .listItems {
+    font-size: 10px;
+  }
+  .companyDetails {
+    padding-left: 15px;
     
-}
-
-.experience{
-    padding: 5px;
-    margin: 20px;
-   
-}
-
-.exp{
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0px;
-}
-.expHead{
-    margin: 5px;
-}
-.para{
-    border-left: 5px solid goldenrod;
-    border-radius: 5px;
+  }
+  .education {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .degree{
+    font-size: 12px;
+  }
+  .skilSet{
+    font-size: 12px;
+  }
+  .companyTitle{
+    font-size: 10px;
+  }
 }

@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Temp2.module.css";
 import dp from "../Temp2/user.png";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { MyContext } from "../Context/context";
 import { useInput } from "../UserInput/UserInput";
+import { Link } from "react-router-dom";
+import { backendUrl } from "../../../config";
 
 const Temp2 = () => {
   const { getID, setID } = useInput();
@@ -19,7 +21,7 @@ const Temp2 = () => {
 
   const handlegetDetails = async () => {
     console.log("Getting details...", getID);
-    const response = await fetch(`http://localhost:5000/input/${getID}`, {
+    const response = await fetch(`${backendUrl}/input/${getID}`, {
       headers: {
         "auth-token": accessToken,
       },
@@ -31,7 +33,7 @@ const Temp2 = () => {
   useEffect(() => {
     handlegetDetails();
   }, []);
-
+// download the Pdf file using html2canvas and jsPDF
   const downloadPDF = () => {
     const temp2capture = document.querySelector(".resume");
     setLoader(true);
@@ -64,16 +66,8 @@ const Temp2 = () => {
             <div className={styles.leftSide}>
               <div className={styles.profileText}>
                 <div
-                  className={styles.profilePic}
-                  style={{
-                    position: "relative",
-                    height: "250px",
-                    width: "250px",
-                    overflow: "hidden",
-                    borderRadius: "50%",
-                  }}
-                >
-                  <img src={dp} alt="Profile_picture" id={styles.img} />
+                  className={styles.profilePic}>
+                  <img src={dp} alt="Profile_picture" className={styles.img} />
                 </div>
                 <h2 className={styles.header}>
                   {showData.name}
@@ -110,12 +104,12 @@ const Temp2 = () => {
                     </span>
                     {showData.linkedurl}
                   </li>
-                  <li className={styles.listItems}>
+                  {/* <li className={styles.listItems}>
                     <span className={styles.icon}>
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                     </span>
                     {showData.address}
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 
@@ -123,8 +117,8 @@ const Temp2 = () => {
                 <h2 className={styles.titleEdu}>Education</h2>
                 <ul className={styles.educationInfo} type="none">
                   <li className={styles.listEdu}>
-                    <h5>{showData.education}</h5>
-                    <h4>{showData.education1}</h4>
+                    <p className={styles.eduhead}>{showData.education}</p>
+                    <p className={styles.eduhead}>{showData.education1}</p>
                   </li>
                 </ul>
               </div>
@@ -132,25 +126,27 @@ const Temp2 = () => {
                 <h2 className={styles.titleEdu}>Tech Skills</h2>
                 <ul className={styles.skillInfo} type="none">
                   <li className={styles.listSkill}>{showData.skills}</li>
-                  <li> {showData.skills1}</li>
-                  <li> {showData.skills2}</li>
-                  <li> {showData.skills3}</li>
+                  <li className={styles.listSkill}> {showData.skills1}</li>
+                  <li className={styles.listSkill}> {showData.skills2}</li>
+                  <li className={styles.listSkill}> {showData.skills3}</li>
                 </ul>
               </div>
             </div>
             <div className={styles.rightSide}>
               <div className={styles.summary}>
-                <h2>Summary</h2>
-                <p>{showData.summary}</p>
+                <h2 className={styles.titleEdu}>Summary</h2>
+                <p className={styles.sumpara}>{showData.summary}</p>
               </div>
               <div className={styles.experience}>
-                <h2>Experience</h2>
-                <ul type="none">
+                <h2 className={styles.titleEdu}>Experience</h2>
+                <ul type="none" className={styles.companyDetails}>
                   <li>
-                    <h5>{showData.companyName}</h5>
+                    <h5 className={styles.companyTitle}>
+                      {showData.companyName}
+                    </h5>
                     <div className={styles.exp}>
-                      <h5>{showData.desig}</h5>
-                      <h5>
+                      <h5 className={styles.companyTitle}>{showData.desig}</h5>
+                      <h5 className={styles.companyTitle}>
                         {showData.expYearStart} - {showData.expYearEnd}
                       </h5>
                     </div>
@@ -158,10 +154,12 @@ const Temp2 = () => {
                   </li>{" "}
                   <br />
                   <li>
-                    <h5>{showData.companyName1}</h5>
+                    <h5 className={styles.companyTitle}>
+                      {showData.companyName1}
+                    </h5>
                     <div className={styles.exp}>
-                      <h5>{showData.desig1}</h5>
-                      <h5>
+                      <h5 className={styles.companyTitle}>{showData.desig1}</h5>
+                      <h5 className={styles.companyTitle}>
                         {showData.expYearStart1} - {showData.expYearEnd1}
                       </h5>
                     </div>
@@ -169,10 +167,12 @@ const Temp2 = () => {
                   </li>{" "}
                   <br />
                   <li>
-                    <h5>{showData.companyName2}</h5>
+                    <h5 className={styles.companyTitle}>
+                      {showData.companyName2}
+                    </h5>
                     <div className={styles.exp}>
-                      <h5>{showData.desig2}</h5>
-                      <h5>
+                      <h5 className={styles.companyTitle}>{showData.desig2}</h5>
+                      <h5 className={styles.companyTitle}>
                         {showData.expYearStart2} - {showData.expYearEnd2}
                       </h5>
                     </div>
@@ -184,14 +184,20 @@ const Temp2 = () => {
           </div>
         </div>
       </div>
-      <button
-        className="btn-primary"
-        onClick={downloadPDF}
-        disabled={!loader === false}
-        style={{}}
-      >
-        {loader ? <span>Downloading Resume</span> : <span>Download</span>}
-      </button>
+      <div className={styles.down}>
+        <button className={styles.btnDownload}>
+          <Link to="/template" className={styles.btnDownload}>
+            Back to Template
+          </Link>
+        </button>
+        <button
+          className={styles.btnDownload}
+          onClick={downloadPDF}
+          disabled={!loader === false}
+        >
+          {loader ? <span>Downloading Resume</span> : <span>Download</span>}
+        </button>
+      </div>
     </div>
   );
 };

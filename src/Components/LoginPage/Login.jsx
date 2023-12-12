@@ -17,6 +17,7 @@ const Login = () => {
     setData({ ...data, [name]: value });
   };
 
+  //  fetching data from the Backend
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(`${backendUrl}/login`, {
@@ -52,8 +53,7 @@ const Login = () => {
         theme: "dark",
       });
     } else {
-      console.log(result);
-      toast.success('Login Successfully', {
+      toast.success("Login Successfully", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -62,13 +62,14 @@ const Login = () => {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
+      });
       navigate("/template");
       sessionStorage.setItem("user", JSON.stringify(result));
     }
   };
 
-  console.log(data);
+  // console.log(data);
+
   if (
     sessionStorage.getItem("user") &&
     JSON.parse(sessionStorage.getItem("user"))
@@ -76,71 +77,75 @@ const Login = () => {
     return <Navigate to={"/template"} replace />;
   }
   return (
-    <div style={{height:'100vh' , width:'100vw' , backgroundColor:'#B3B6B7'}}>
-    <div className="container">
-      <div className={styles.loginPage}>
-        <div className={styles.left}>
-          <form
-            className={styles.form_container}
-            action="submit"
-            onSubmit={handleSubmit}
-          >
-            <h1>Login</h1>
-            <div>
-              {/* <label htmlFor="email">Email</label> */}
-              <input
-                type="email"
-                name="email"
-                value={data.email}
-                onChange={handleChange}
-                placeholder="Enter your email ID"
-                className={styles.input}
-              />
-            </div>
-            <div>
-              {/* <label htmlFor="password">Password</label> */}
-              <input
-                type="password"
-                name="password"
-                value={data.password}
-                onChange={handleChange}
-                placeholder="Enter your password"
-                className={styles.input}
-              />
-            </div>
-            <div>
-              <button type="submit" className={styles.green_btn}>
-                Login
-              </button>
-              {/* <span><Link to='/register'>Create an account</Link></span> */}
-            </div>
-          </form>
-          
-        </div>
-        <div className={styles.right}>
-          <div className={styles.signin_container}>
-            <h1>New Here!</h1>
-            <Link to="/register">
-              <button type="button" className={styles.white_btn}>
-                create an account
-              </button>
-            </Link>
+    <div
+      style={{ height: "100vh", width: "100vw", backgroundColor: "#B3B6B7" }}
+    >
+      <div className="container">
+        <div className={styles.loginPage}>
+          <div className={styles.left}>
+            <form
+              className={styles.form_container}
+              action="submit"
+              onSubmit={handleSubmit}
+            >
+              <h1>Login</h1>
+              <div>
+                {/* <label htmlFor="email">Email</label> */}
+                <input
+                  type="email"
+                  name="email"
+                  value={data.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email ID"
+                  className={styles.input}
+                />
+              </div>
+              <div>
+                {/* <label htmlFor="password">Password</label> */}
+                <input
+                  type="password"
+                  name="password"
+                  value={data.password}
+                  onChange={handleChange}
+                  placeholder="Enter your password"
+                  className={styles.input}
+                />
+              </div>
+              <div>
+                <button type="submit" className={styles.green_btn}>
+                  Login
+                </button>
+                {/* <span><Link to='/register'>Create an account</Link></span> */}
+              </div>
+              <Link to={"/forgotPassword"} className={styles.linkBtn}>
+                Forgot Password
+              </Link>
+            </form>
           </div>
-          <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+          <div className={styles.right}>
+            <div className={styles.signin_container}>
+              <h1 className={styles.heading}>New Here!</h1>
+              <Link to="/register">
+                <button type="button" className={styles.white_btn}>
+                  create an account
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
-    </div>
     </div>
   );
 };

@@ -31,6 +31,9 @@
     padding: 8px 30px;
     border-radius: 10px;
     margin:0px 10px;
+    color: white;
+    text-decoration: none;
+
 }
 
 .btn:hover{
@@ -41,4 +44,70 @@
     height: 50px;
     width: 50px;
     margin: 10px;
+}
+
+.linkBtn{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media screen and (max-width:650px){
+    .image{
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+    }
+    .linkBtn{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .pros{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:500px){
+    .image{
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+    }
+    .linkBtn{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .pros{
+        font-size: 18px;
+    }
+    .btn{
+        border: none;
+        outline: none;
+        background-color:#3bb19b;
+        padding: 5px 15px;
+        border-radius: 10px;
+        margin:0px 10px;
+        color: white;
+        text-decoration: none;
+    
+    }
+    .navTop{
+        display: flex;
+        flex-wrap: wrap;
+        width:100vw ;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+       background-color:black;
+    }
+}
+
+@media screen and (max-width:450px){
+    .pros{
+        font-size: 15px;
+    }
 }

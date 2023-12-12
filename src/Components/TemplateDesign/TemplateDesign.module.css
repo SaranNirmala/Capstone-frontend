@@ -1,66 +1,107 @@
-
-.cardcontainer{
-    background:#242422 ;
-    min-height:100vh;
-    width:100vw;
+.cardcontainer {
+  background: #242422;
+  min-height: 100vh;
+  width: 100vw;
 }
-.tempHead{
-    color: white;
-   padding-top: 20px;
-   text-align: center;
+.tempHead {
+  color: white;
+  padding-top: 20px;
+  text-align: center;
 }
-.card{
-    display: flex;
-    min-height: 76vh;
-    width:100vw;
-    align-items: center;
-    justify-content: center;
-   flex-wrap: wrap;
-}
-
-.cardcontainer::-webkit-scrollbar{
-    display: none;
+.card {
+  display: flex;
+  min-height: 76vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.navTop{
-    display: flex;
-    flex-wrap: wrap;
-    width:100vw ;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-   background-color:black;
-   /* background: radial-gradient(circle, #310e68 0%, #5f0f40 100%); */
-}
-.pros{
-    color: white;
-}
-.rightNav{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.searchInput{
-    border:1px solid;
-    padding: 10px 100px;
-    margin: 10px;
-    background-color:#fff;
-    border-radius: 10px;
+.cardcontainer::-webkit-scrollbar {
+  display: none;
 }
 
-.btn{
-    border: none;
-    outline: none;
-    background-color:#3bb19b;
-    padding: 8px 30px;
-    border-radius: 10px;
-    margin:0px 10px;
+.navTop {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: black;
+  padding: 0px 15px;
+}
+.pros {
+  color: white;
 }
 
-.image{
-    height: 50px;
-    width: 50px;
-    margin: 10px;
-    border-radius: 10%;
-   }
+.btn {
+  border: none;
+  outline: none;
+  background-color: #3bb19b;
+  padding: 7px 20px;
+  border-radius: 10px;
+  width: 150px;
+  /* margin:0px 10px; */
+  text-align: center;
+  /* margin: auto; */
+}
 
+.image {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  border-radius: 10%;
+}
+
+.linkBtn {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+}
+.profile {
+  height: 50px;
+  width: 50px;
+}
+.dpBtn {
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+}
+.profileContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  text-wrap: wrap;
+}
+.dropDown {
+  position: absolute;
+  height: 180px;
+  width: 250px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 70px;
+  right: 20px;
+
+  /* margin-top: 100px; */
+}
+
+@media screen and (max-width: 768px){
+  .tempHead{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .tempHead{
+    font-size: 20px;
+  }
+}

@@ -49,3 +49,7 @@
     font-size: 14px;
     cursor: pointer;
 }
+.linkBtn{
+    text-decoration:none;
+    color: #fff;
+}
