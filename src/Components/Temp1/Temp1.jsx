@@ -20,7 +20,7 @@ const Temp1 = () => {
   const { accessToken } = JSON.parse(sessionStorage.getItem("user"));
 
   const handlegetDetails = async () => {
-    console.log("Getting details...", getID);
+    // console.log("Getting details...", getID);
     const response = await fetch(`${backendUrl}/input/${getID}`, {
       headers: {
         "auth-token": accessToken,
@@ -28,7 +28,7 @@ const Temp1 = () => {
     });
     const res = await response.json();
     setShowData(res);
-    console.log(res);
+    // console.log(res);
   };
   useEffect(() => {
     handlegetDetails();

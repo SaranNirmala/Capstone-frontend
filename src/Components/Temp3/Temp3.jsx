@@ -10,14 +10,14 @@ import { backendUrl } from "../../../config";
 
 const Temp3 = () => {
   const { getID, setID } = useInput();
-  console.log(getID);
+  // console.log(getID);
   const [loader, setLoader] = useState(false);
 
   const [showData, setShowData] = useState({});
   const { accessToken } = JSON.parse(sessionStorage.getItem("user"));
 
   const handlegetDetails = async () => {
-    console.log("Getting details...", getID);
+    // console.log("Getting details...", getID);
     const response = await fetch(`${backendUrl}/input/${getID}`, {
       headers: {
         "auth-token": accessToken,
@@ -25,7 +25,7 @@ const Temp3 = () => {
     });
     const res = await response.json();
     setShowData(res);
-    console.log(res);
+    // console.log(res);
   };
   useEffect(() => {
     handlegetDetails();

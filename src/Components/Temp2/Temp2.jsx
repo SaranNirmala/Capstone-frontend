@@ -11,7 +11,7 @@ import { backendUrl } from "../../../config";
 
 const Temp2 = () => {
   const { getID, setID } = useInput();
-  console.log(getID);
+  // console.log(getID);
   // const [getID, setID]= useContext(MyContext);
   // const [getID, setID]= inputValue();
   const [loader, setLoader] = useState(false);
@@ -20,7 +20,7 @@ const Temp2 = () => {
   const { accessToken } = JSON.parse(sessionStorage.getItem("user"));
 
   const handlegetDetails = async () => {
-    console.log("Getting details...", getID);
+    // console.log("Getting details...", getID);
     const response = await fetch(`${backendUrl}/input/${getID}`, {
       headers: {
         "auth-token": accessToken,
@@ -28,7 +28,7 @@ const Temp2 = () => {
     });
     const res = await response.json();
     setShowData(res);
-    console.log(res);
+    // console.log(res);
   };
   useEffect(() => {
     handlegetDetails();
