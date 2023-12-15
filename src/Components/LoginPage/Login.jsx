@@ -53,6 +53,7 @@ const Login = () => {
         theme: "dark",
       });
     } else {
+      alert("Login Successfully");
       toast.success("Login Successfully", {
         position: "top-right",
         autoClose: 5000,
